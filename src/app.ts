@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import authRoutes from "./routes/auth.routes";
 import accountRoutes from "./routes/account.routes";
 import transanctionRoutes from "./routes/transanction.routes";
-
+import dashboardRoutes from "./routes/dashboard.routes";
 
 dotenv.config();
 
@@ -15,6 +15,7 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/accounts", accountRoutes);
 app.use("/transanctions", transanctionRoutes);
+app.use("/api", dashboardRoutes);
 
 
 // Basic test route
